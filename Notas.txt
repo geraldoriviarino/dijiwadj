@@ -21,6 +21,16 @@ Media > Medium , Medium , Mittlere
 Department > Department , Departement , Abteilung
 
 
+
+
+e
+Preferencias:
+-4temas
+-Permisos sobre los contactos
+
+
+
+
 ic_menu_view
 sym_action_chat
 sym_action_email
@@ -139,3 +149,5 @@ stat_notify_chat
 
 Permitir escoger varios contactos para email mediante long click y seleccion multiple. Que te deje añadir más si vuelves a darle
 al botón de seleccionar contacto, y que te salgan como marcados (mediante un intent) los que ya están guardados.
+
+dialogo.setActivity(this);
