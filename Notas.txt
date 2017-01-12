@@ -1,0 +1,141 @@
+Que cliente abra flujo y servidor lo cierre(outputinput...)
+Problema: cada vez que intentamos recibir un mensaje, creamos otro inputstream desde el cliente. por lo que
+éste deberá ser un parámetro que le pasemos al hilo y etc.
+
+<18:05:10> "Mario": Español> inglés , afrikaáns , alemán
+<18:05:14> "Mario": Mensajería> Messaging , boodskappe , Messaging
+<18:15:16> "Mario": Correo/email > e-mail , e-pos , e-mail
+SMS > SMS , SMS , SMS
+remitente > sender , sender , Absender
+destinatario > addressee , geadresseerde , Empfänger
+Motivo del mensaje > Reason for the message , Daarom Boodskap , Grund der Nachricht
+<18:21:24> "Mario": Correo/email > e-mail , e-pos , e-mail
+SMS > SMS , SMS , SMS
+remitente > sender , sender , Absender
+destinatario > addressee , geadresseerde , Empfänger
+Motivo del mensaje > Reason for the message , Daarom Boodskap , Grund der Nachricht
+<18:26:54> "Mario": Baja > Low , Lae , Niedrige
+Alta > High , Hoë , Hohe
+Urgente > Urgent , Dringende , Dringlich
+Media > Medium , Medium , Mittlere
+Department > Department , Departement , Abteilung
+
+
+ic_menu_view
+sym_action_chat
+sym_action_email
+
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="actionBarStyle">@style/Widget.AppTheme.ActionBar</item>
+</style>
+
+stat_notify_chat
+
+
+
+
+ <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabCancelar"
+        android:layout_width="66dp"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        app:backgroundTint="@color/rojo_oscuro"
+        android:layout_gravity="bottom|start"
+        tools:srcCompat="@android:drawable/presence_offline"
+        android:onClick="onCancelar"
+        android:layout_height="66dp"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabContactos"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="onSeleccionar_contacto"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        tools:srcCompat="@android:drawable/ic_menu_my_calendar"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabEnviar"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        app:backgroundTint="@android:color/holo_green_light"
+        android:onClick="onEnviar"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_alignTop="@+id/fabCancelar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_width="66dp"
+        android:layout_height="66dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:ems="10"
+        android:id="@+id/etMensaje"
+        android:background="@color/verde_muy_claro"
+        android:hint="@string/pista_mensaje_SMS"
+        android:maxLength="160"
+        android:layout_height="170dp"
+        android:enabled="false"
+        android:layout_above="@+id/fabEnviar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/contacto_seleccionado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/etMensaje"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/seleccionar_contacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_above="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="49dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+
+
+
+
+
+
+Permitir escoger varios contactos para email mediante long click y seleccion multiple. Que te deje añadir más si vuelves a darle
+al botón de seleccionar contacto, y que te salgan como marcados (mediante un intent) los que ya están guardados.
